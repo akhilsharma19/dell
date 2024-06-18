@@ -14,18 +14,19 @@ tl.from("#first", {
   x: -40,
   duration: 0.6,
   opacity: 0,
+  ease: "power2.out", // Smooth easing
 });
 
+// Animation for #second element
 tl.from(
   "#second",
   {
     x: 40,
     duration: 0.6,
-    //   delay: 1,
     opacity: 0,
-    //   stagger: 0.3,
+    ease: "power2.out", // Smooth easing
   },
-  "-=0.39"
+  "-=0.39" // Position relative to the previous animation
 );
 var tl2 = gsap.timeline();
 tl2.to(".content", {
